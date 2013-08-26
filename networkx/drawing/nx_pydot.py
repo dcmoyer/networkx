@@ -283,7 +283,7 @@ def pydot_layout(G,prog='neato',root=None, **kwds):
 
     node_pos={}
     for n in G.nodes():
-        pydot_node = pydot.Node(make_str(n)).get_name().encode('utf-8')
+        pydot_node = pydot.Node(make_str(n)).get_name()
         node=Q.get_node(pydot_node)
 
         if isinstance(node,list):
